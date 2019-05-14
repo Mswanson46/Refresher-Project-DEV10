@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="RealTODO.css">
+<style>
+.alignment{
+  text-align: center;
+}
+.float{
+  padding-left: 400px;
+}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+<body>
+<div class="alignment">
+<h1>Todo List</h1></div>
+
+<form id="todoForm">
+<div class="float">
+<p>Task</p>
+
+<input id="myInput" style="width: 600px;">
+<br>
+<br>
+<p>Days to Complete</p>
+
+<input type="number" id="Daystocomplete" class="days" style="width: 600px;">
+<div class="tooltip">
+  <span class="tooltiptext">
+<element onmouseover="mouseover">You must enter a number.</span>
+  </div>
+<br><br>
+<button type="button" onclick="todoList()" class="btn btn-default" style="background-color: #1A85fe; color: #ffffff;">Submit</button>
+
+</div>
+<br><hr><br>
+<div class="container">
+<div class="row">
+
+  <div class="col">
+    <div class="alert alert-danger alert-dismissible" id="myAlert">
+<ul id="listofTasks" class="tileme">
+  <a href="#" class="close">&times;</a>
+
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+  </form>
+  <script>
+$(document).ready(function(){
+  $(".close").click(function(){
+    $("#myAlert").alert("close");
+  });
+});
+</script>
+
+<script src="RealTODO.js"></script>
+
+</body>
+</html>
